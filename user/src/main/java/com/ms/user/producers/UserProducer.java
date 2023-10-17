@@ -18,7 +18,6 @@ public class UserProducer {
     @Value(value = "${broker.queue.email.name}")
     private String routingKey;
 
-
     public void publishMessageEmail(UserModel userModel) {
         var emailDto = new EmailDto();
         emailDto.setUserId(userModel.getUserId());
